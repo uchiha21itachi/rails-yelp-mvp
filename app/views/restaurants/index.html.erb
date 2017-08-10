@@ -1,0 +1,16 @@
+<h1>Welcome to Zomato </h1>
+
+<div> <p> <%=  link_to "Add a new restaurant", new_restaurant_path %></p> </div>
+
+<div>
+
+<% @restaurants.each do |restaurant|  %>
+
+  <h2><%= restaurant.id %></h2>
+  <h2><%= restaurant.name %></h2>
+  <p><%= restaurant.address %></p>
+  <p><%= restaurant.phone_number %></p>
+  <p><%= restaurant.category %></p>
+  <%=  link_to "view more", restaurant_path(restaurant) %>
+  <% end %>
+</div>
